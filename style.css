@@ -1,0 +1,93 @@
+
+body{
+    background: grey;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 400;
+}
+.wrap{
+width: 300px;
+margin: 150px auto;
+
+}
+.menu{
+width: 300px;
+text-transform: uppercase;
+font-size: 14px;
+}
+
+input#toggle{
+    position: absolute;
+    z-index: -9999;
+}
+input#toggle:checked ~ label{
+background: rgba(255,255,255,0.25);
+box-shadow:0 8px 32px 0 rgba(31,38,135,0.37);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+
+
+}
+
+input#toggle:checked ~ ul{
+    display: block;
+    opacity: 1;
+}
+
+ul{
+margin: 20px 0 0 0;
+display: none;
+opacity: 0;
+animation: fade 0.5s linear;
+}
+label, li{
+    width: 300px;
+    background: rgba(255,255,255,0.25);
+    box-shadow:0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: block;
+    padding: 15px 20px;
+    cursor: pointer;
+    
+}
+li{
+
+margin-left: -34px;
+
+}
+
+ul::before{
+display: block;
+content: '';
+width: 0;
+height: 0;
+border-left: 10px solid transparent;
+border-right: 15px solid transparent;
+border-bottom: 15ps solid aqua;
+position: relative;
+left: 100%;
+}
+
+li:last-child{border: none;}
+
+
+span, a{
+color: black;
+letter-spacing: 2px;
+text-decoration: none;
+}
+
+@keyframes fade {
+
+0%{opacity: 0;}
+100%{opacity: 1;}
+    
+}
